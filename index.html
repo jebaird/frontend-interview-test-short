@@ -24,5 +24,21 @@
 
 	</div>
 
+
+<script>
+	(function(){
+		var form = document.getElementsByTagname('form')[0];
+		var input = document.querySelectorAll('[name=post]')[0]
+		form.onsubmit = function(e){
+			e.preventDefault();
+			
+			var p = document.createElement('p');
+			p.innerHTML( input.value + (new Date().getTime() / 1000 ))
+			input.value = ''
+		}
+		
+	})();
+	
+</script>
 </body>
 </html>
